@@ -21,7 +21,7 @@ On Windows - virtualenv_name/Scripts/activate
 
 3. Firstly you need to clone or download my project from github repositories:
 ```bash
-git clone https://github.com/hossainchisty/Health-Care-Django.git
+git clone https://github.com/safiullah3915/CareConnect-Medi-App
 ```
 
 4. Then enter the corresponding directory:
