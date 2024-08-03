@@ -1,0 +1,97 @@
+{% extends '_base.html' %}
+
+{% block banner %}
+<!-- Empty block or customized content for sign-in page -->
+<section id="banner" class="banner">
+  <div class="bg-color">
+    <div class="container">
+      <div class="row">
+        <div class="banner-info">
+            <div class="custom-sign-in-container">
+                <h2 class="custom-sign-in-heading">Sign In</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="custom-form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" class="custom-form-control">
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" class="custom-form-control">
+                    </div>
+                    <button type="submit" class="custom-btn-submit">Sign In</button>
+                </form>
+                <p class="custom-sign-up-text">Not registered? <a href="{% url 'sign_up' %}" class="custom-btn-link">Sign Up</a></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+<style>
+    /* Ensures the container has unique styling */
+    .custom-sign-in-container {
+      background-color: #fff !important; /* White background */
+      padding: 40px !important; /* Added padding */
+      border-radius: 15px !important; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important; /* Shadow for depth */
+      width: 360px !important; /* Fixed width */
+      margin: 5% auto !important; /* Centered with margin */
+      text-align: center !important; /* Center text */
+    }
+  
+    .custom-sign-in-heading {
+      margin-bottom: 30px !important; /* Space below heading */
+      font-size: 28px !important; /* Larger font size */
+      color: #333 !important; /* Dark text color */
+      font-weight: bold !important; /* Bold text */
+    }
+  
+    .custom-form-group {
+      margin-bottom: 20px !important; /* Space between form groups */
+      text-align: left !important; /* Align labels to the left */
+    }
+  
+    .custom-form-group label {
+      display: block !important; /* Block display for label */
+      margin-bottom: 8px !important; /* Space below label */
+      font-size: 16px !important; /* Font size for label */
+      color: #555 !important; /* Slightly lighter text color */
+    }
+  
+    .custom-form-control {
+      width: 100% !important; /* Full width */
+      padding: 12px !important; /* Padding inside the input */
+      border: 1px solid #ccc !important; /* Light border color */
+      border-radius: 8px !important; /* Rounded corners */
+      box-sizing: border-box !important; /* Include border in element's width */
+      font-size: 16px !important; /* Font size inside input */
+    }
+  
+    .custom-btn-submit {
+      padding: 12px 25px !important; /* Padding around the button */
+      border: none !important; /* Remove default border */
+      border-radius: 8px !important; /* Rounded corners */
+      background-color: #0cb8b6 !important; /* Button color */
+      color: white !important; /* Text color */
+      font-size: 18px !important; /* Font size for button */
+      cursor: pointer !important; /* Pointer cursor on hover */
+      margin-top: 15px !important; /* Space above button */
+    }
+  
+    .custom-btn-submit:hover {
+      background-color: #0a9d9b !important; /* Darker shade on hover */
+    }
+  
+    .custom-btn-link {
+      color: #0cb8b6 !important; /* Link color */
+      text-decoration: none !important; /* Remove underline */
+      font-size: 16px !important; /* Font size for link */
+    }
+  
+    .custom-btn-link:hover {
+      text-decoration: underline !important; /* Underline on hover */
+    }
+</style>
