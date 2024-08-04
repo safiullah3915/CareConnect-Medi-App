@@ -9,6 +9,8 @@ urlpatterns = [
     path('doctor/', views.DoctorListView.as_view(), name='doctor_team'),
 
     path('contact/', views.ContactView.as_view(), name='contact'),
+    path('oauth2callback/', views.oauth2callback, name='oauth2callback'),
+
 
     #path('about/', views.about, name='about'),
     #path('testimonial/', views.testimonial, name='testimonial'),
